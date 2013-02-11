@@ -1,0 +1,52 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarTabTextStyle">@style/CustomBarTabTextStyle</item>
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <!-- item name="android:actionBarTabStyle">@style/CustomBarTabStyle</item-->
+        
+    </style>
+    
+    <style name="CustomBarTabTextStyle" parent="@android:style/Widget.Holo.ActionBar.TabBar">
+    	<item name="android:textSize">16sp</item>
+    	<item name="android:textColor">@android:color/black</item>
+    	<item name="android:fontFamily">sans-serif-light</item>
+    	
+	</style>
+	
+    <style name="CustomBarTabStyle" parent="@android:style/Widget.Holo.ActionBar.TabView">
+	    <item name="android:background">@drawable/tab_indicator_ab_light_tabs</item>
+	</style>
+	
+    <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+	    <item name="android:titleTextStyle">@style/TextActionBar</item>
+	    <!-- item name="android:background">@android:color/holo_blue_light</item-->  
+	    <item name="android:icon">@drawable/ic_actionbar_black</item>
+	    <!-- item name="android:backgroundStacked">@android:color/holo_blue_dark</item-->
+	    <item name="android:backgroundSplit">@android:color/white</item>
+	    <item name="android:actionModeSplitBackground">@android:color/white</item>
+	</style>
+	
+    <style name="TextActionBar">
+	    <item name="android:textColor">@android:color/darker_gray</item>
+	    <item name="android:textSize">22sp</item>
+	    <item name="android:textStyle">bold</item>
+	    <item name="android:fontFamily">sans-serif-condensed</item>
+	    
+	</style>
+
+</resources>

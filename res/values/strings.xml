@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Baby Feed</string>   
+    <string name="title_section2">Log</string>
+    <string name="title_section1">Add new</string>
+    <string name="add_new">Add new</string>
+    <string name="add_new_image">Add new icon</string>
+    <string name="next_alarm">I will remind you again in 2 hours and 18 min.</string>
+    <string name="text_since">Click the button to add an entry to the baby feed log.</string>
+    <string name="menu_settings">Settings</string>
+
+    <string-array name="jazzy_effects">
+        <item>Standard</item>
+        <item>Tablet</item>
+        <item>CubeIn</item>
+        <item>CubeOut</item>
+        <item>FlipVertical</item>
+        <item>FlipHorizontal</item>
+        <item>Stack</item>
+        <item>ZoomIn</item>
+        <item>ZoomOut</item>
+        <item>RotateUp</item>
+        <item>RotateDown</item>
+        <item>Accordion</item>
+    </string-array>
+</resources>

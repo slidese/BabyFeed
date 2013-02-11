@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="se.slide.babyfeed"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/babyfeed"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="se.slide.babyfeed.FeedActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="se.slide.babyfeed.SettingsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <receiver android:name="BootReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED"/>
+			</intent-filter>
+		</receiver>
+        
+        <receiver android:name="AlarmReceiver"></receiver>
+        
+        <service android:enabled="true" android:name="se.slide.babyfeed.PlayAlarmService" />
+        <service android:enabled="true" android:name="se.slide.babyfeed.PlayAlarmService2" />
+    </application>
+
+</manifest>

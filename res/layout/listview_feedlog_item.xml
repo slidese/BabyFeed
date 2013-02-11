@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:orientation="vertical"
+    
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="@android:color/white"
+        android:layout_height="80dp" >
+        
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@id/frameLayout"
+            android:background="@android:color/background_dark" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_launcher_babyfeed" />
+            
+    	</FrameLayout>
+        
+        <TextView
+            android:id="@+id/textTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/frameLayout"
+            android:fontFamily="sans-serif-light"
+            android:text="Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTime"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/frameLayout"
+        android:fontFamily="sans-serif-light"
+        android:text="Text" />
+    
+    
+
+    </RelativeLayout>
+    
+    
+
+</LinearLayout>
