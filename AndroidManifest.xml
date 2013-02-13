@@ -27,6 +27,10 @@
             android:name="se.slide.babyfeed.SettingsActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="se.slide.babyfeed.AboutActivity"
+            android:label="@string/app_name" >
+        </activity>
         
         <receiver android:name="BootReceiver">
 			<intent-filter>

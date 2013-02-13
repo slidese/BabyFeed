@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Baby Feed</string>   
+    <string name="app_name">Baby Feed</string>
+    <string name="app_version">Version 1.0</string>
+    <string name="ok">OK</string>
     <string name="title_section2">Log</string>
     <string name="title_section1">Add new</string>
     <string name="add_new">Add new</string>

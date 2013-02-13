@@ -7,6 +7,8 @@ public class Utils {
     public static final long ONE_MINUTE = ONE_SECOND * 60;
     public static final long ONE_HOUR = ONE_MINUTE * 60;
     public static final long ONE_DAY = ONE_HOUR * 24;
+    
+    public static final String PREF_FIRST_USE = "first_use";
 
     public static String getFriendlyDatetimeInterval(Date from, Date to) {
         long elapsed = to.getTime() - from.getTime();

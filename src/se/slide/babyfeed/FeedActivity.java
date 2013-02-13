@@ -19,6 +19,7 @@ import com.jfeinstein.jazzyviewpager.JazzyViewPager;
 import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
 
 import se.slide.babyfeed.db.DatabaseManager;
+import se.slide.babyfeed.utils.Utils;
 
 public class FeedActivity extends FragmentActivity implements
         ActionBar.TabListener {
@@ -54,6 +55,8 @@ public class FeedActivity extends FragmentActivity implements
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         
+        firstTimeUse();
+        
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the app.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -86,6 +89,22 @@ public class FeedActivity extends FragmentActivity implements
                     .setTabListener(this));
         }
 
+    }
+    
+    private void firstTimeUse() {
+        boolean showNotification = true;
+        
+        if (mSharedPreferences != null)
+            showNotification = mSharedPreferences.getBoolean(Utils.PREF_FIRST_USE, true);
+        
+        if (mSharedPreferences != null && showNotification) {
+            //mSharedPreferences.edit().putBoolean(Utils.PREF_FIRST_USE, false).commit();
+            
+            FragmentManager fm = getSupportFragmentManager();
+            
+            CustomDialog firstUseDialog = CustomDialog.newInstance("Please read", "This application does not warrant.");
+            firstUseDialog.show(fm, "custom_dialog_tag");
+        }
     }
 
     @Override
