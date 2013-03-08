@@ -1,12 +1,17 @@
 
 package se.slide.babyfeed;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.text.Html;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
 
-public class AboutActivity extends Activity {
+public class AboutActivity extends FragmentActivity {
 
     /*
      * (non-Javadoc)
@@ -17,6 +22,22 @@ public class AboutActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_about);
+        
+        
+        TextView message = (TextView) findViewById(R.id.aboutMessage);
+        message.setText(Html.fromHtml(getString(R.string.about_message)));
+        
+        TextView acks = (TextView) findViewById(R.id.aboutAcknowledgments);
+        acks.setText(Html.fromHtml(getString(R.string.about_acknowledgements)));
+        acks.setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getSupportFragmentManager();
+                CustomDialog firstUseDialog = CustomDialog.newInstance(getString(R.string.acknowledgements_title), getString(R.string.acknowledgements_message));
+                firstUseDialog.show(fm, "custom_dialog_tag");
+            }
+        });
 
         getActionBar().setHomeButtonEnabled(true);
         getActionBar().setDisplayHomeAsUpEnabled(true);

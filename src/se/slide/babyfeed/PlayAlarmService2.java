@@ -40,7 +40,7 @@ public class PlayAlarmService2 extends Service {
         // mKeepPlaying = true;
         // AsyncTaskPlayAlarm mPlayAlarm = new AsyncTaskPlayAlarm(this);
         // mPlayAlarm.execute();
-        Toast.makeText(this, "onCreate", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "onCreate", Toast.LENGTH_LONG).show();
     }
 
     /*

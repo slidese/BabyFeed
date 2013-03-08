@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<LinearLayout 
     android:id="@+id/edit_name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -9,13 +15,15 @@
     android:paddingBottom="32dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:paddingTop="32dp" >
+    android:paddingTop="16dp" >
 
     <ImageView
-        android:src="@drawable/babyfeed"
+        android:src="@drawable/ic_baby_about"
+        android:contentDescription="@string/about_imgdesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
         />
     
     <!-- TextView
@@ -39,6 +47,16 @@
         android:textColor="@android:color/darker_gray" />
     
     <TextView
+        android:id="@+id/aboutAcknowledgments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_horizontal"
+        android:text="@string/about_acknowledgements"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/holo_blue_light" />
+    
+    <TextView
         android:id="@+id/aboutMessage"
         android:padding="16dp"
         android:layout_width="wrap_content" 
@@ -46,3 +64,4 @@
       
     
 </LinearLayout>
+</ScrollView>

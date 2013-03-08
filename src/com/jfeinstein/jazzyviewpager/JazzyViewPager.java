@@ -399,7 +399,7 @@ public class JazzyViewPager extends ViewPager {
 			}
 		}
 	}
-
+	
 	protected void animateStack(View left, View right, float positionOffset, int positionOffsetPixels) {		
 		if (mState != State.IDLE) {
 			if (right != null) {

@@ -42,7 +42,8 @@
 	</style>
 	
     <style name="TextActionBar">
-	    <item name="android:textColor">@android:color/darker_gray</item>
+	    <!-- item name="android:textColor">@android:color/darker_gray</item-->
+	    <item name="android:textColor">@android:color/holo_blue_light</item>
 	    <item name="android:textSize">22sp</item>
 	    <item name="android:textStyle">bold</item>
 	    <item name="android:fontFamily">sans-serif-condensed</item>

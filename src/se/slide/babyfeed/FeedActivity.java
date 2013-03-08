@@ -98,11 +98,11 @@ public class FeedActivity extends FragmentActivity implements
             showNotification = mSharedPreferences.getBoolean(Utils.PREF_FIRST_USE, true);
         
         if (mSharedPreferences != null && showNotification) {
-            //mSharedPreferences.edit().putBoolean(Utils.PREF_FIRST_USE, false).commit();
+            mSharedPreferences.edit().putBoolean(Utils.PREF_FIRST_USE, false).commit();
             
             FragmentManager fm = getSupportFragmentManager();
             
-            CustomDialog firstUseDialog = CustomDialog.newInstance("Please read", "This application does not warrant.");
+            CustomDialog firstUseDialog = CustomDialog.newInstance(getString(R.string.first_time_title), getString(R.string.first_time_message));
             firstUseDialog.show(fm, "custom_dialog_tag");
         }
     }

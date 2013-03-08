@@ -203,7 +203,7 @@ public class FeedFragment extends Fragment {
             
             String remindText = "I will remind you again in about<br/>" + friendlyDate;
             if (cal.compareTo(now) < 1)
-                remindText = "I have already reminded you. Have you fed your baby after the last reminder?";
+                remindText = "I have reminded you. Have you fed your baby after the last reminder?";
             
             mTextRemindIn.setText(Html.fromHtml(remindText));
         }
