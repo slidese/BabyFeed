@@ -9,6 +9,8 @@ public class Utils {
     public static final long ONE_DAY = ONE_HOUR * 24;
     
     public static final String PREF_FIRST_USE = "first_use";
+    public static final String PREF_APP_OPENS = "app_opens";
+    public static final String PREF_APP_RATED = "app_rated";
 
     public static String getFriendlyDatetimeInterval(Date from, Date to) {
         long elapsed = to.getTime() - from.getTime();

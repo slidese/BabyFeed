@@ -2,9 +2,14 @@
 package se.slide.babyfeed;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.FragmentTransaction;
+import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.DialogInterface.OnClickListener;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
@@ -14,6 +19,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.jfeinstein.jazzyviewpager.JazzyViewPager;
 import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
@@ -41,6 +48,8 @@ public class FeedActivity extends FragmentActivity implements
     private JazzyViewPager mViewPager;
     
     private SharedPreferences mSharedPreferences;
+    
+    private AlertDialog mRateAppDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +65,8 @@ public class FeedActivity extends FragmentActivity implements
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         
         firstTimeUse();
+        
+        rateApp();
         
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the app.
@@ -104,6 +115,53 @@ public class FeedActivity extends FragmentActivity implements
             
             CustomDialog firstUseDialog = CustomDialog.newInstance(getString(R.string.first_time_title), getString(R.string.first_time_message));
             firstUseDialog.show(fm, "custom_dialog_tag");
+        }
+    }
+    
+    private void rateApp() {
+        if (!mSharedPreferences.getBoolean(Utils.PREF_APP_RATED, false)) {
+            int appOpens = mSharedPreferences.getInt(Utils.PREF_APP_OPENS, 0) + 1;
+            if (appOpens == 20 || appOpens == 100) {
+                
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle(R.string.rate_app_title);
+                builder.setMessage(R.string.rate_app_message);
+                builder.setPositiveButton(getString(R.string.rate_app_yes), new OnClickListener() {
+                    
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        mSharedPreferences.edit().putBoolean(Utils.PREF_APP_RATED, true).commit();
+                        showGooglePlay();
+                        dialog.dismiss();
+                    }
+                });
+                builder.setNegativeButton(getString(R.string.rate_app_no), new OnClickListener() {
+                    
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        
+                    }
+                });
+                
+                mRateAppDialog = builder.create();
+                mRateAppDialog.show();
+                
+            }
+            
+            if (appOpens < 101)
+                mSharedPreferences.edit().putInt(Utils.PREF_APP_OPENS, appOpens).commit();
+        }
+        
+    }
+    
+    private void showGooglePlay() {
+        Uri uri = Uri.parse("market://details?id=" + getPackageName());
+        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+        try {
+          startActivity(goToMarket);
+        } catch (ActivityNotFoundException e) {
+          Toast.makeText(this, "Couldn't launch the market", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -156,6 +214,17 @@ public class FeedActivity extends FragmentActivity implements
     protected void onResume() {
         stopService(new Intent(this, PlayAlarmService2.class));
         super.onResume();
+    }
+
+    /* (non-Javadoc)
+     * @see android.support.v4.app.FragmentActivity#onPause()
+     */
+    @Override
+    protected void onPause() {
+        super.onPause();
+        
+        if (mRateAppDialog != null)
+            mRateAppDialog.dismiss();
     }
 
     /**

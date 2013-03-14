@@ -13,6 +13,11 @@
     <string name="text_since">Click the button to add an entry to the baby feed log.</string>
     <string name="menu_settings">Settings</string>
     
+    <string name="rate_app_title">Please rate me</string>
+    <string name="rate_app_message">If you\'ve found this app useful please consider rating it in the Google Play store.\n\nThank you very much! :)</string>
+    <string name="rate_app_no">No, thank you</string>
+    <string name="rate_app_yes">Of course!</string>
+    
     <string name="first_time_title">Please read</string>
     <string name="first_time_message">This app is just to aid in feeding the baby, it should never be &lt;b&gt;the only&lt;/b&gt; thing relied upon.&lt;br /&gt;&lt;br /&gt;Always listen to your doctor on how and when to feed your baby.&lt;br /&gt;&lt;br /&gt;I take no responsibility for your use of this app.</string>
     
