@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Baby Feed</string>
-    <string name="app_version">Version 1.0</string>
+    <string name="app_version">Version 1.1</string>
     
     <string name="ok">OK</string>
     <string name="title_section2">Log</string>
