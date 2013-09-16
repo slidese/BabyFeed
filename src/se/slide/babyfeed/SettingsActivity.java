@@ -20,6 +20,8 @@ import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
+import com.google.analytics.tracking.android.EasyTracker;
+
 import java.util.List;
 
 /**
@@ -57,6 +59,18 @@ public class SettingsActivity extends PreferenceActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    
+    @Override
+    public void onStart() {
+      super.onStart();
+      EasyTracker.getInstance(this).activityStart(this);
+    }
+
+    @Override
+    public void onStop() {
+      super.onStop();
+      EasyTracker.getInstance(this).activityStop(this);
     }
 
     /**

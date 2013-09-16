@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+import com.google.analytics.tracking.android.EasyTracker;
+
 public class AboutActivity extends FragmentActivity {
 
     /*
@@ -57,4 +59,15 @@ public class AboutActivity extends FragmentActivity {
         }
     }
 
+    @Override
+    public void onStart() {
+      super.onStart();
+      EasyTracker.getInstance(this).activityStart(this);
+    }
+
+    @Override
+    public void onStop() {
+      super.onStop();
+      EasyTracker.getInstance(this).activityStop(this);
+    }
 }
