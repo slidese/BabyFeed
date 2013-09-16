@@ -17,8 +17,6 @@ Android app that helps you keep track of when your baby has been fed; with simpl
 
 # License
 
-	Baby Feed
-
     Copyright 2013 Mikael Magnusson
 
     This program is free software: you can redistribute it and/or modify
