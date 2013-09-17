@@ -2,7 +2,7 @@
 
 Android app that helps you keep track of when your baby has been fed; with simple logging and alarm with notification.
 
-![Screenshot 1][2]
+![Screenshot 1][2] ![Screenshot 2][6]
 
 [![Get it on Google Play][3]][4]
 
@@ -38,3 +38,4 @@ Android app that helps you keep track of when your baby has been fed; with simpl
 [3]: http://www.android.com/images/brand/get_it_on_play_logo_small.png
 [4]: https://play.google.com/store/apps/details?id=se.slide.babyfeed
 [5]: http://www.slide.se
+[6]: https://raw.github.com/slidese/BabyFeed/master/device-2013-03-08-235628.png
