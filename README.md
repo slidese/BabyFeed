@@ -13,6 +13,7 @@ Android app that helps you keep track of when your baby has been fed; with simpl
 # Developed by
 
 * Mikael Magnusson, <mike@slide.se>
+* [www.slide.se][5]
 * Google+ profile: [https://plus.google.com/113216017223819971202][1]
 
 # License
@@ -36,3 +37,4 @@ Android app that helps you keep track of when your baby has been fed; with simpl
 [2]: https://raw.github.com/slidese/BabyFeed/master/device-2013-03-09-003123.png
 [3]: http://www.android.com/images/brand/get_it_on_play_logo_small.png
 [4]: https://play.google.com/store/apps/details?id=se.slide.babyfeed
+[5]: http://www.slide.se
