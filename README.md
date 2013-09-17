@@ -9,6 +9,7 @@ Android app that helps you keep track of when your baby has been fed; with simpl
 # Setup
 
 - Eclipse
+- A string resource `google_analytics_id` need to be created with a Google Analytics ID.
 
 # Developed by
 
