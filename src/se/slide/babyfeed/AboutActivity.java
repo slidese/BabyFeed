@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+import com.crashlytics.android.Crashlytics;
 import com.google.analytics.tracking.android.EasyTracker;
 
 public class AboutActivity extends FragmentActivity {
@@ -23,6 +24,8 @@ public class AboutActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Crashlytics.start(this);
+        
         setContentView(R.layout.activity_about);
         
         

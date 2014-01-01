@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
 import com.google.analytics.tracking.android.EasyTracker;
 import com.jfeinstein.jazzyviewpager.JazzyViewPager;
 import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
@@ -56,6 +57,7 @@ public class FeedActivity extends FragmentActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Crashlytics.start(this);
         DatabaseManager.init(this);
         setContentView(R.layout.activity_feed);
 
