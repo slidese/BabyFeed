@@ -23,6 +23,8 @@ public class BootReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        DatabaseManager.init(context);
+        
         AlarmManager mgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(context, AlarmReceiver.class);
         PendingIntent pi = PendingIntent.getBroadcast(context, 0, i, 0);

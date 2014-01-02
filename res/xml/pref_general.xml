@@ -21,12 +21,5 @@
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
         android:title="@string/pref_title_sync_frequency" />
-    
-    <Preference android:title="@string/pref_title_about" >
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="se.slide.babyfeed"
-            android:targetClass="se.slide.babyfeed.AboutActivity" />
-    </Preference>
 
 </PreferenceScreen>

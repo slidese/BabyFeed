@@ -1,0 +1,12 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ListPreference
+        android:defaultValue="-1"
+        android:entries="@array/pref_donate_list"
+        android:entryValues="@array/pref_donate_list_values"
+        android:key="donate"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_donate" />
+    
+</PreferenceScreen>
