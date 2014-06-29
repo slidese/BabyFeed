@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BabyFeed.iml" filepath="$PROJECT_DIR$/BabyFeed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidUtils/androidUtils.iml" filepath="$PROJECT_DIR$/androidUtils/androidUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appRater/appRater.iml" filepath="$PROJECT_DIR$/appRater/appRater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/babyFeed/babyFeed.iml" filepath="$PROJECT_DIR$/babyFeed/babyFeed.iml" />
+    </modules>
+  </component>
+</project>
+

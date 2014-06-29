@@ -1,0 +1,3 @@
+include ':appRater'
+include ':androidUtils'
+include ':babyFeed'
